@@ -21,10 +21,20 @@ uint8_t CST816D_Init(void)
     uint8_t temp_data;
 
     // 硬件复位CST816D
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET); // RST引脚拉低
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_RESET); // RST引脚拉低
     HAL_Delay(20);                                         // 延时20ms（增加复位时间）
-    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);   // RST引脚拉高
-    HAL_Delay(100);                                        // 延时100ms等待芯片稳定启动
+    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_5, GPIO_PIN_SET);   // RST引脚拉高
+    HAL_Delay(100);                                       // 延时100ms等待芯片稳定启动
+
+    uint8_t chip_id = 0;
+    if (CST816D_ReadReg(0xA7, &chip_id, 1) == HAL_OK)
+    {
+        printf("CST816D ChipID = 0x%02X\r\n", chip_id);
+    }
+    else
+    {
+        printf("Failed to read CST816D ChipID!\r\n");
+    }
 
     // 关闭自动休眠，确保持续工作
     temp_data = 0x01; // 禁用自动休眠
@@ -90,7 +100,7 @@ HAL_StatusTypeDef CST816D_GetTouchData(CST816D_TouchData *touch_data)
 uint8_t CST816D_IsTouched(void)
 {
     // 直接返回INT引脚状态，移除2ms延时
-    return (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_13) == GPIO_PIN_RESET);
+    return (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_10) == GPIO_PIN_RESET);
 }
 
 // 进入深度休眠模式

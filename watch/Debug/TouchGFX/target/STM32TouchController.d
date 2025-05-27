@@ -1,6 +1,6 @@
 TouchGFX/target/STM32TouchController.o: \
  ../TouchGFX/target/STM32TouchController.cpp \
- D:/stm32u575_watch/watch/BSP/../BSP/CST816D/cst816d.h ../Core/Inc/main.h \
+ D:/GitHub/u5_watch/watch/BSP/../BSP/CST816D/cst816d.h ../Core/Inc/main.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal.h \
  ../Core/Inc/stm32u5xx_hal_conf.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_rcc.h \
@@ -42,7 +42,7 @@ TouchGFX/target/STM32TouchController.o: \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/touch/TouchController.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Types.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Config.hpp
-D:/stm32u575_watch/watch/BSP/../BSP/CST816D/cst816d.h:
+D:/GitHub/u5_watch/watch/BSP/../BSP/CST816D/cst816d.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal.h:
 ../Core/Inc/stm32u5xx_hal_conf.h:

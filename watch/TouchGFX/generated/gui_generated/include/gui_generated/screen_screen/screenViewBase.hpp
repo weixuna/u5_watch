@@ -8,7 +8,8 @@
 #include <mvp/View.hpp>
 #include <gui/screen_screen/screenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/containers/SwipeContainer.hpp>
+#include <touchgfx/containers/Container.hpp>
 
 class screenViewBase : public touchgfx::View<screenPresenter>
 {
@@ -26,8 +27,12 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
+    touchgfx::SwipeContainer swipeContainer1;
+    touchgfx::Container swipeContainer1Page1;
+    touchgfx::Container swipeContainer1Page2;
     touchgfx::Box box1;
-    touchgfx::Image image1;
+    touchgfx::Container swipeContainer1Page3;
+    touchgfx::Box box2;
 
 private:
 

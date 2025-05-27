@@ -11,13 +11,32 @@ screenViewBase::screenViewBase()
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
+    swipeContainer1.setXY(0, 0);
+    swipeContainer1.setSwipeCutoff(50);
+    swipeContainer1.setEndSwipeElasticWidth(50);
+
+    swipeContainer1Page1.setWidth(240);
+    swipeContainer1Page1.setHeight(296);
+    swipeContainer1.add(swipeContainer1Page1);
+
+    swipeContainer1Page2.setWidth(240);
+    swipeContainer1Page2.setHeight(296);
     box1.setPosition(0, 0, 240, 296);
     box1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    add(box1);
+    swipeContainer1Page2.add(box1);
 
-    image1.setXY(44, 72);
-    image1.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_LOGOS_TOUCHGFX_GRADIENT_EMBOSSED_SVG_152_152_000000_SVG_ID));
-    add(image1);
+    swipeContainer1.add(swipeContainer1Page2);
+
+    swipeContainer1Page3.setWidth(240);
+    swipeContainer1Page3.setHeight(296);
+    box2.setPosition(0, 0, 240, 296);
+    box2.setColor(touchgfx::Color::getColorFromRGB(250, 25, 25));
+    swipeContainer1Page3.add(box2);
+
+    swipeContainer1.add(swipeContainer1Page3);
+
+    swipeContainer1.setSelectedPage(1);
+    add(swipeContainer1);
 }
 
 screenViewBase::~screenViewBase()

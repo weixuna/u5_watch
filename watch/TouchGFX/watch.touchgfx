@@ -5,24 +5,63 @@
         "Name": "screen",
         "Components": [
           {
-            "Type": "Box",
-            "Name": "box1",
+            "Type": "SwipeContainer",
+            "Name": "swipeContainer1",
             "Width": 240,
             "Height": 296,
-            "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
-            }
-          },
-          {
-            "Type": "Image",
-            "Name": "image1",
-            "X": 44,
-            "Y": 72,
-            "Width": 152,
-            "Height": 152,
-            "RelativeFilename": "__generated\\alternate_theme_images_logos_touchgfx_gradient_embossed_svg_152_152_000000.svg.png"
+            "SwipeCutoff": 50,
+            "IndicatorImageNormal": "__generated\\alternate_theme_images_widgets_swipecontainer_medium_off_normal.png",
+            "IndicatorImageHighlight": "__generated\\alternate_theme_images_widgets_swipecontainer_medium_on_active.png",
+            "EndSwipeElasticWidth": 50,
+            "SelectedPage": "swipeContainer1Page2",
+            "Preset": "alternate_theme\\presets\\swipecontainer\\medium_active.json",
+            "Components": [
+              {
+                "Type": "Container",
+                "Name": "swipeContainer1Page1",
+                "Width": 240,
+                "Height": 296,
+                "Components": []
+              },
+              {
+                "Type": "Container",
+                "Name": "swipeContainer1Page2",
+                "Width": 240,
+                "Height": 296,
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box1",
+                    "Width": 240,
+                    "Height": 296,
+                    "Color": {
+                      "Red": 255,
+                      "Green": 255,
+                      "Blue": 255
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Container",
+                "Name": "swipeContainer1Page3",
+                "Width": 240,
+                "Height": 296,
+                "Components": [
+                  {
+                    "Type": "Box",
+                    "Name": "box2",
+                    "Width": 240,
+                    "Height": 296,
+                    "Color": {
+                      "Red": 250,
+                      "Green": 25,
+                      "Blue": 25
+                    }
+                  }
+                ]
+              }
+            ]
           }
         ],
         "Interactions": []

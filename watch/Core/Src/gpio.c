@@ -56,7 +56,7 @@ void MX_GPIO_Init(void)
 
     /*Configure GPIO pin : PC5 */
     GPIO_InitStruct.Pin = GPIO_PIN_5;           // CTP_RST
-    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
     GPIO_InitStruct.Pull = GPIO_PULLUP;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
     HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
