@@ -44,7 +44,7 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:touchgfx::Box::~Box()	1
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:29:7:virtual touchgfx::Box::~Box()	1
 ../TouchGFX/generated/gui_generated/src/screen_screen/screenViewBase.cpp:8:1:screenViewBase::screenViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen_screen/screenViewBase.cpp:42:1:screenViewBase::~screenViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen_screen/screenViewBase.cpp:42:1:virtual screenViewBase::~screenViewBase()	1
-../TouchGFX/generated/gui_generated/src/screen_screen/screenViewBase.cpp:47:6:virtual void screenViewBase::setupScreen()	1
+../TouchGFX/generated/gui_generated/src/screen_screen/screenViewBase.cpp:38:1:screenViewBase::~screenViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen_screen/screenViewBase.cpp:38:1:virtual screenViewBase::~screenViewBase()	1
+../TouchGFX/generated/gui_generated/src/screen_screen/screenViewBase.cpp:43:6:virtual void screenViewBase::setupScreen()	1
 ../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:39:5:touchgfx::View<T>::View() [with T = screenPresenter]	1

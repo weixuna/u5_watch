@@ -28,7 +28,6 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::SwipeContainer swipeContainer1;
-    touchgfx::Container swipeContainer1Page1;
     touchgfx::Container swipeContainer1Page2;
     touchgfx::Box box1;
     touchgfx::Container swipeContainer1Page3;

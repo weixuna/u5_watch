@@ -95,7 +95,7 @@ void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect& rect)
     // To calculate the start address of rect,
     // use advanceFrameBufferToRect(uint8_t* fbPtr, const touchgfx::Rect& rect)
     // defined in TouchGFXGeneratedHAL.cpp
-	printf("fluashBuffer\r\n");
+	//printf("fluashBuffer\r\n");
     uint8_t *fbPtr = (uint8_t *)getClientFrameBuffer();
     for (size_t row = 0; row < rect.height; row++)
     {

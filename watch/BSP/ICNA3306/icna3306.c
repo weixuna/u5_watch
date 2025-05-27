@@ -254,9 +254,9 @@ HAL_StatusTypeDef ICNA3306_WriteCmdData(uint8_t cmd, size_t len, const uint8_t *
     HAL_StatusTypeDef status;
     OSPI_RegularCmdTypeDef sCommand = {0};
 
-    // printf("OSPI State: %d\r\n", hospi1.State);
-    // printf("MemoryType: %d\r\n", hospi1.Init.MemoryType);
-    // printf("OperationType: %d\r\n", sCommand.OperationType);
+     printf("OSPI State: %d\r\n", hospi1.State);
+     printf("MemoryType: %d\r\n", hospi1.Init.MemoryType);
+     printf("OperationType: %d\r\n", sCommand.OperationType);
     if (len == 0 || data == NULL)
         return HAL_ERROR;
 
@@ -316,9 +316,9 @@ HAL_StatusTypeDef ICNA3306_WriteCmdData(uint8_t cmd, size_t len, const uint8_t *
 
 void ICNA3306_DrawBuffer(int16_t x_start, int16_t y_start, int16_t width, int16_t height, const uint8_t *buf, size_t len)
 {
-    //    printf("Draw Buffer:\r\n");
-    //    printf("Size: %dx%d pixels\r\n", width, height);
-    //    printf("Data length: %d bytes\r\n", len);
+        printf("Draw Buffer:\r\n");
+        printf("Size: %dx%d pixels\r\n", width, height);
+        printf("Data length: %d bytes\r\n", len);
     uint8_t params[5] = {0};
     int16_t x_end = x_start + width - 1;
     int16_t y_end = y_start + height - 1;

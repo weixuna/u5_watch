@@ -15,10 +15,6 @@ screenViewBase::screenViewBase()
     swipeContainer1.setSwipeCutoff(50);
     swipeContainer1.setEndSwipeElasticWidth(50);
 
-    swipeContainer1Page1.setWidth(240);
-    swipeContainer1Page1.setHeight(296);
-    swipeContainer1.add(swipeContainer1Page1);
-
     swipeContainer1Page2.setWidth(240);
     swipeContainer1Page2.setHeight(296);
     box1.setPosition(0, 0, 240, 296);
