@@ -38,6 +38,7 @@ CPP_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
+BSP/BMP280 \
 BSP/CST816D \
 BSP/ICNA3306 \
 Core/Src \

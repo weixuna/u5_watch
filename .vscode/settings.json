@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "app_touchgfx.h": "c",
+        "bmp280.h": "c"
+    }
+}

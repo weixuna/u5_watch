@@ -112,7 +112,7 @@ int main(void)
   /* Call PreOsInit function */
   MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */
-  I2C_Scan(&hi2c3);
+  //I2C_Scan(&hi2c3);
     HAL_TIM_Base_Start_IT(&htim6);
   /* USER CODE END 2 */
 

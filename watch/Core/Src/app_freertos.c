@@ -1,20 +1,20 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * File Name          : app_freertos.c
-  * Description        : FreeRTOS applicative file
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2025 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * File Name          : app_freertos.c
+ * Description        : FreeRTOS applicative file
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2025 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 
 /* Includes ------------------------------------------------------------------*/
@@ -26,6 +26,7 @@
 #include "i2c.h"
 #include <string.h>
 #include "app_touchgfx.h"
+#include "../BSP/BMP280/BMP280.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,92 +49,133 @@
 
 /* USER CODE END Variables */
 /* Definitions for defaultTask */
+
 osThreadId_t defaultTaskHandle;
 const osThreadAttr_t defaultTask_attributes = {
-  .name = "defaultTask",
-  .priority = (osPriority_t) osPriorityNormal,
-  .stack_size = 128 * 4
-};
+    .name = "defaultTask",
+    .priority = (osPriority_t)osPriorityNormal,
+    .stack_size = 128 * 4};
+
 osThreadId_t GUI_TaskHandle;
 const osThreadAttr_t GUI_Task_attributes = {
-  .name = "GUI_Task",
-  .priority = (osPriority_t) osPriorityNormal,
-  .stack_size = 10240 * 4
-};
+    .name = "GUI_Task",
+    .priority = (osPriority_t)osPriorityNormal,
+    .stack_size = 10240 * 4};
+
+osThreadId_t BMP280_TaskHandle;
+const osThreadAttr_t BMP280_Task_attributes = {
+    .name = "BMP280_Task",
+    .priority = (osPriority_t)osPriorityNormal,
+    .stack_size = 2048 * 4};
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
 
 /* USER CODE END FunctionPrototypes */
 
 /**
-  * @brief  FreeRTOS initialization
-  * @param  None
-  * @retval None
-  */
-void MX_FREERTOS_Init(void) {
-  /* USER CODE BEGIN Init */
+ * @brief  FreeRTOS initialization
+ * @param  None
+ * @retval None
+ */
+void MX_FREERTOS_Init(void)
+{
+    /* USER CODE BEGIN Init */
 
-  /* USER CODE END Init */
+    /* USER CODE END Init */
 
-  /* USER CODE BEGIN RTOS_MUTEX */
-  /* add mutexes, ... */
-  /* USER CODE END RTOS_MUTEX */
+    /* USER CODE BEGIN RTOS_MUTEX */
+    /* add mutexes, ... */
+    /* USER CODE END RTOS_MUTEX */
 
-  /* USER CODE BEGIN RTOS_SEMAPHORES */
-  /* add semaphores, ... */
-  /* USER CODE END RTOS_SEMAPHORES */
+    /* USER CODE BEGIN RTOS_SEMAPHORES */
+    /* add semaphores, ... */
+    /* USER CODE END RTOS_SEMAPHORES */
 
-  /* USER CODE BEGIN RTOS_TIMERS */
-  /* start timers, add new ones, ... */
-  /* USER CODE END RTOS_TIMERS */
+    /* USER CODE BEGIN RTOS_TIMERS */
+    /* start timers, add new ones, ... */
+    /* USER CODE END RTOS_TIMERS */
 
-  /* USER CODE BEGIN RTOS_QUEUES */
-  /* add queues, ... */
-  /* USER CODE END RTOS_QUEUES */
-  /* creation of defaultTask */
-  defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
-  GUI_TaskHandle = osThreadNew(TouchGFX_GUI, NULL, &GUI_Task_attributes);
-  /* USER CODE BEGIN RTOS_THREADS */
-  /* add threads, ... */
-  /* USER CODE END RTOS_THREADS */
+    /* USER CODE BEGIN RTOS_QUEUES */
+    /* add queues, ... */
+    /* USER CODE END RTOS_QUEUES */
+    /* creation of defaultTask */
+    defaultTaskHandle = osThreadNew(StartDefaultTask, NULL, &defaultTask_attributes);
 
-  /* USER CODE BEGIN RTOS_EVENTS */
-  /* add events, ... */
-  /* USER CODE END RTOS_EVENTS */
+    GUI_TaskHandle = osThreadNew(TouchGFX_GUI, NULL, &GUI_Task_attributes);
 
+    BMP280_TaskHandle = osThreadNew(BMP280_Task, NULL, &BMP280_Task_attributes);
+    /* USER CODE BEGIN RTOS_THREADS */
+    /* add threads, ... */
+    /* USER CODE END RTOS_THREADS */
+
+    /* USER CODE BEGIN RTOS_EVENTS */
+    /* add events, ... */
+    /* USER CODE END RTOS_EVENTS */
 }
 /* USER CODE BEGIN Header_StartDefaultTask */
 /**
-* @brief Function implementing the defaultTask thread.
-* @param argument: Not used
-* @retval None
-*/
+ * @brief Function implementing the defaultTask thread.
+ * @param argument: Not used
+ * @retval None
+ */
 /* USER CODE END Header_StartDefaultTask */
 void StartDefaultTask(void *argument)
 {
-  /* USER CODE BEGIN defaultTask */
+    /* USER CODE BEGIN defaultTask */
 
-  /* Infinite loop */
-  for(;;)
-  {
-    osDelay(1);
-  }
-  /* USER CODE END defaultTask */
+    /* Infinite loop */
+    for (;;)
+    {
+        osDelay(1);
+    }
+    /* USER CODE END defaultTask */
 }
 
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
+
 void TouchGFX_GUI(void *argument)
 {
     /* USER CODE BEGIN defaultTask */
     MX_TouchGFX_Process();
 
     /* Infinite loop */
-    for(;;)
+    for (;;)
     {
         osDelay(1);
     }
     /* USER CODE END defaultTask */
 }
-/* USER CODE END Application */
+BMP280_HandleTypedef bmp280;
 
+float pressure, temperature, humidity;
+void BMP280_Task(void *argument)
+{
+
+    bmp280_init_default_params(&bmp280.params);
+    bmp280.addr = BMP280_I2C_ADDRESS_0;
+    bmp280.i2c = &hi2c3;
+
+    while (!bmp280_init(&bmp280, &bmp280.params))
+    {
+        printf("BMP280 init error...\r\n");
+        osDelay(2000);
+    }
+
+    bool bme280p = bmp280.id == BME280_CHIP_ID;
+    printf("find %s sensor\r\n", bme280p ? "BME280" : "BMP280");
+
+    for (;;)
+    {
+        if (bmp280_read_float(&bmp280, &temperature, &pressure, &humidity))
+        {
+            printf("pre: %.2f Pa, temp %.2f C\r\n", pressure, temperature);
+        }
+        else
+        {
+            printf("read data error\r\n");
+        }
+        osDelay(2000);
+    }
+}
+/* USER CODE END Application */

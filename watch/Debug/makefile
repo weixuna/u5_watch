@@ -47,6 +47,7 @@ RM := rm -rf
 -include Core/Src/subdir.mk
 -include BSP/ICNA3306/subdir.mk
 -include BSP/CST816D/subdir.mk
+-include BSP/BMP280/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)

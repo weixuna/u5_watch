@@ -1,3 +1,4 @@
+"./BSP/BMP280/BMP280.o"
 "./BSP/CST816D/cst816d.o"
 "./BSP/ICNA3306/icna3306.o"
 "./Core/Src/app_freertos.o"

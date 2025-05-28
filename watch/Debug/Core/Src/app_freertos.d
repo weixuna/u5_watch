@@ -48,7 +48,8 @@ Core/Src/app_freertos.o: ../Core/Src/app_freertos.c \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_uart_ex.h \
  ../Drivers/STM32U5xx_HAL_Driver/Inc/stm32u5xx_hal_exti.h \
  ../Middlewares/Third_Party/CMSIS/RTOS2/Include/cmsis_os2.h \
- ../Core/Inc/i2c.h ../TouchGFX/App/app_touchgfx.h
+ ../Core/Inc/i2c.h ../TouchGFX/App/app_touchgfx.h \
+ D:/GitHub/u5_watch/watch/BSP/../BSP/BMP280/BMP280.h
 ../Core/Inc/app_freertos.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
@@ -101,3 +102,4 @@ Core/Src/app_freertos.o: ../Core/Src/app_freertos.c \
 ../Middlewares/Third_Party/CMSIS/RTOS2/Include/cmsis_os2.h:
 ../Core/Inc/i2c.h:
 ../TouchGFX/App/app_touchgfx.h:
+D:/GitHub/u5_watch/watch/BSP/../BSP/BMP280/BMP280.h:
