@@ -112,7 +112,7 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void *argument)
 {
   /* USER CODE BEGIN defaultTask */
-    //I2C_Scan(&hi2c3);
+
   /* Infinite loop */
   for(;;)
   {

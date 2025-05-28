@@ -2,57 +2,171 @@
   "Application": {
     "Screens": [
       {
-        "Name": "screen",
+        "Name": "mainPage",
+        "Components": [
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "swipeMenuPage1",
+            "Width": 240,
+            "Height": 296,
+            "CustomContainerDefinitionName": "SwipeMenuPage"
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "SwipeMenuPage",
+        "Width": 240,
+        "Height": 296,
         "Components": [
           {
             "Type": "SwipeContainer",
-            "Name": "swipeContainer1",
+            "Name": "swipeContainerPage",
             "Width": 240,
             "Height": 296,
             "SwipeCutoff": 50,
             "IndicatorImageNormal": "__generated\\alternate_theme_images_widgets_swipecontainer_medium_off_normal.png",
             "IndicatorImageHighlight": "__generated\\alternate_theme_images_widgets_swipecontainer_medium_on_active.png",
             "EndSwipeElasticWidth": 50,
-            "SelectedPage": "swipeContainer1Page3",
+            "SelectedPage": "mainPage",
             "Preset": "alternate_theme\\presets\\swipecontainer\\medium_active.json",
             "Components": [
               {
                 "Type": "Container",
-                "Name": "swipeContainer1Page2",
+                "Name": "sportsPage",
+                "Width": 240,
+                "Height": 296,
+                "Components": []
+              },
+              {
+                "Type": "Container",
+                "Name": "mainPage",
                 "Width": 240,
                 "Height": 296,
                 "Components": [
                   {
-                    "Type": "Box",
-                    "Name": "box1",
+                    "Type": "Image",
+                    "Name": "image1",
                     "Width": 240,
                     "Height": 296,
-                    "Color": {
-                      "Red": 255,
-                      "Green": 255,
-                      "Blue": 255
-                    }
+                    "RelativeFilename": "mianImage.png"
                   }
                 ]
               },
               {
                 "Type": "Container",
-                "Name": "swipeContainer1Page3",
+                "Name": "healthyPage",
                 "Width": 240,
                 "Height": 296,
-                "Components": [
-                  {
-                    "Type": "Box",
-                    "Name": "box2",
-                    "Width": 240,
-                    "Height": 296,
-                    "Color": {
-                      "Red": 250,
-                      "Green": 25,
-                      "Blue": 25
-                    }
-                  }
-                ]
+                "Components": []
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "slideMenuPage",
+            "Y": -296,
+            "Width": 240,
+            "Height": 296,
+            "Moveable": true,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "box1",
+                "Width": 240,
+                "Height": 296
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "zhendong_button",
+                "X": 168,
+                "Y": 200,
+                "Width": 65,
+                "Height": 65,
+                "Pressed": "controlCenter_iamge\\zhendong_pressed.png",
+                "Released": "controlCenter_iamge\\zhendong.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "wurao_button",
+                "X": 88,
+                "Y": 200,
+                "Width": 65,
+                "Height": 65,
+                "Pressed": "controlCenter_iamge\\wurao_pressed.png",
+                "Released": "controlCenter_iamge\\wurao.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "taiwan_button",
+                "X": 10,
+                "Y": 200,
+                "Width": 65,
+                "Height": 65,
+                "Pressed": "controlCenter_iamge\\taiwan_pressed.png",
+                "Released": "controlCenter_iamge\\taiwan.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "shezhi_button",
+                "X": 168,
+                "Y": 116,
+                "Width": 65,
+                "Height": 65,
+                "Pressed": "controlCenter_iamge\\shezhi_pressed.png",
+                "Released": "controlCenter_iamge\\shezhi.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "naozhong_button",
+                "X": 88,
+                "Y": 116,
+                "Width": 65,
+                "Height": 65,
+                "Pressed": "controlCenter_iamge\\naozhong_pressed.png",
+                "Released": "controlCenter_iamge\\naozhong.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "miaobiao_button",
+                "X": 10,
+                "Y": 116,
+                "Width": 65,
+                "Height": 65,
+                "Pressed": "controlCenter_iamge\\miaobiao_pressed.png",
+                "Released": "controlCenter_iamge\\miaobiao.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "liangdu_button",
+                "X": 168,
+                "Y": 33,
+                "Width": 65,
+                "Height": 65,
+                "Pressed": "controlCenter_iamge\\liangdu_pressed.png",
+                "Released": "controlCenter_iamge\\liangdu.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "jishi_button",
+                "X": 89,
+                "Y": 33,
+                "Width": 65,
+                "Height": 65,
+                "Pressed": "controlCenter_iamge\\jishi_pressed.png",
+                "Released": "controlCenter_iamge\\jishi.png"
+              },
+              {
+                "Type": "ToggleButton",
+                "Name": "fore_button",
+                "X": 10,
+                "Y": 33,
+                "Width": 65,
+                "Height": 65,
+                "Pressed": "controlCenter_iamge\\fore_pressed.png",
+                "Released": "controlCenter_iamge\\fore.png"
               }
             ]
           }
@@ -60,14 +174,13 @@
         "Interactions": []
       }
     ],
-    "CustomContainerDefinitions": [],
     "Name": "MyApplication",
     "Resolution": {
       "Width": 240,
       "Height": 296
     },
     "SelectedColorDepth": 16,
-    "StartupScreenName": "screen",
+    "StartupScreenName": "mainPage",
     "SelectedStartupLanguage": "GB",
     "TouchGfxPath": "../Middlewares/ST/touchgfx",
     "UIPath": ".",

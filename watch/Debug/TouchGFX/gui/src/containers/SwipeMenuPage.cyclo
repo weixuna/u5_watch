@@ -1,0 +1,30 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/events/GestureEvent.hpp:74:13:int16_t touchgfx::GestureEvent::getVelocity() const	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/events/GestureEvent.hpp:84:22:touchgfx::GestureEvent::GestureEventType touchgfx::GestureEvent::getType() const	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:273:13:int16_t touchgfx::Drawable::getX() const	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:283:13:int16_t touchgfx::Drawable::getY() const	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:356:18:virtual void touchgfx::Drawable::setWidth(int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:368:18:virtual void touchgfx::Drawable::setHeight(int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:378:18:virtual void touchgfx::Drawable::childGeometryChanged()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:389:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:401:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:413:10:void touchgfx::Drawable::setWidthHeight(int16_t, int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Application.hpp:187:10:void touchgfx::Application::registerTimerWidget(touchgfx::Drawable*)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Application.hpp:208:10:void touchgfx::Application::unregisterTimerWidget(const touchgfx::Drawable*)	1
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	1
+../TouchGFX/gui/include/gui/containers/SwipeMenuPage.hpp:10:13:SwipeMenuPage::~SwipeMenuPage()	1
+../TouchGFX/gui/include/gui/containers/SwipeMenuPage.hpp:10:13:virtual SwipeMenuPage::~SwipeMenuPage()	1
+../TouchGFX/gui/src/containers/SwipeMenuPage.cpp:3:1:SwipeMenuPage::SwipeMenuPage()	1
+../TouchGFX/gui/src/containers/SwipeMenuPage.cpp:8:6:virtual void SwipeMenuPage::initialize()	1
+../TouchGFX/gui/src/containers/SwipeMenuPage.cpp:17:6:void SwipeMenuPage::showSlideMenu()	1
+../TouchGFX/gui/src/containers/SwipeMenuPage.cpp:30:6:void SwipeMenuPage::hideSlideMenu()	1
+../TouchGFX/gui/src/containers/SwipeMenuPage.cpp:38:6:virtual void SwipeMenuPage::handleGestureEvent(const touchgfx::GestureEvent&)	8
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:131:10:void touchgfx::MoveAnimator<T>::startMoveAnimation(int16_t, int16_t, uint16_t, touchgfx::EasingEquation, touchgfx::EasingEquation) [with T = touchgfx::Container]	4
+../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:177:10:void touchgfx::MoveAnimator<T>::nextMoveAnimationStep() [with T = touchgfx::Container]	7
