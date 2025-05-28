@@ -39,7 +39,7 @@ static void DMA_TxCpltCallback(DMA_HandleTypeDef *hdma)
 {
     if (hdma == &handle_GPDMA1_Channel13)
     {
-        __DSB(); // 添加内存屏障
+                __DSB(); // 添加内存屏障
         displayRefreshing = false;
     }
 }
@@ -214,6 +214,7 @@ static HAL_StatusTypeDef ICNA3306_SendDataDMA(uint8_t *pData, uint32_t Length)
     return HAL_OK;
 }
 
+
 HAL_StatusTypeDef ICNA3306_WriteCmdParam(uint8_t cmd, size_t len, const uint8_t *params)
 {
     OSPI_RegularCmdTypeDef sCommand = {0};
@@ -249,18 +250,16 @@ HAL_StatusTypeDef ICNA3306_WriteCmdParam(uint8_t cmd, size_t len, const uint8_t 
     return HAL_OK;
 }
 
+
 HAL_StatusTypeDef ICNA3306_WriteCmdData(uint8_t cmd, size_t len, const uint8_t *data)
 {
     HAL_StatusTypeDef status;
     OSPI_RegularCmdTypeDef sCommand = {0};
 
-     printf("OSPI State: %d\r\n", hospi1.State);
-     printf("MemoryType: %d\r\n", hospi1.Init.MemoryType);
-     printf("OperationType: %d\r\n", sCommand.OperationType);
     if (len == 0 || data == NULL)
         return HAL_ERROR;
 
-    HAL_OSPI_Abort(&hospi1); // 先调用
+    HAL_OSPI_Abort(&hospi1);
 
     sCommand.OperationType = HAL_OSPI_OPTYPE_COMMON_CFG;
     sCommand.InstructionMode = HAL_OSPI_INSTRUCTION_1_LINE;
@@ -281,10 +280,10 @@ HAL_StatusTypeDef ICNA3306_WriteCmdData(uint8_t cmd, size_t len, const uint8_t *
 
     sCommand.SIOOMode = HAL_OSPI_SIOO_INST_EVERY_CMD;
 
-    if (HAL_OSPI_Command(&hospi1, &sCommand, HAL_OSPI_TIMEOUT_DEFAULT_VALUE) != HAL_OK)
+    status = HAL_OSPI_Command(&hospi1, &sCommand, HAL_OSPI_TIMEOUT_DEFAULT_VALUE);
+    if (status != HAL_OK)
     {
-        printf("OSPI Command Failed!\r\n");
-        return HAL_ERROR;
+        return status;
     }
     printf("Transfer length: %d\r\n", len);
     if (len > 1024)
@@ -314,11 +313,9 @@ HAL_StatusTypeDef ICNA3306_WriteCmdData(uint8_t cmd, size_t len, const uint8_t *
     return HAL_OK;
 }
 
+
 void ICNA3306_DrawBuffer(int16_t x_start, int16_t y_start, int16_t width, int16_t height, const uint8_t *buf, size_t len)
 {
-        printf("Draw Buffer:\r\n");
-        printf("Size: %dx%d pixels\r\n", width, height);
-        printf("Data length: %d bytes\r\n", len);
     uint8_t params[5] = {0};
     int16_t x_end = x_start + width - 1;
     int16_t y_end = y_start + height - 1;
@@ -341,6 +338,7 @@ void ICNA3306_DrawBuffer(int16_t x_start, int16_t y_start, int16_t width, int16_
     ICNA3306_WriteCmdData(CMD_START_WRITE, len, buf);
 }
 
+
 void ICNA3306_Init(void)
 {
     uint8_t parameter[14];
@@ -355,6 +353,7 @@ void ICNA3306_Init(void)
 
     printf("OSPI DR Addr @ %p\r\n", &(hospi1.Instance->DR));
     printf("GPDMA1_Channel13 Instance @ 0x%08lX\r\n", (uint32_t)handle_GPDMA1_Channel13.Instance);
+
 
     ICNA3306_WriteCmdParam(CMD_RST, 0, NULL);
     HAL_Delay(150);
@@ -375,9 +374,9 @@ void ICNA3306_Init(void)
     parameter[0] = 0x55;
     ICNA3306_WriteCmdParam(0x3A, 1, parameter);
 
-    // (Memory Data Access Control)
-    // parameter[0] = 0x00; // RGB
-    // ICNA3306_WriteCmdParam(0x36, 1, parameter);
+     // (Memory Data Access Control)
+     //parameter[0] = 0x00; // RGB
+     //ICNA3306_WriteCmdParam(0x36, 1, parameter);
 
     parameter[0] = 0x20;
     ICNA3306_WriteCmdParam(0x53, 1, parameter);
@@ -387,6 +386,7 @@ void ICNA3306_Init(void)
 
     parameter[0] = 0xFF;
     ICNA3306_WriteCmdParam(0x63, 1, parameter);
+
 
     ICNA3306_WriteCmdParam(CMD_DISPLAY_ON, 0, NULL);
     HAL_Delay(120);

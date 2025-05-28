@@ -1,23 +1,23 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * File Name          : TouchGFXHAL.cpp
-  ******************************************************************************
-  * This file was created by TouchGFX Generator 4.25.0. This file is only
-  * generated once! Delete this file from your project and re-generate code
-  * using STM32CubeMX or change this file manually to update it.
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2025 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * File Name          : TouchGFXHAL.cpp
+ ******************************************************************************
+ * This file was created by TouchGFX Generator 4.25.0. This file is only
+ * generated once! Delete this file from your project and re-generate code
+ * using STM32CubeMX or change this file manually to update it.
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2025 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 
 #include <TouchGFXHAL.hpp>
@@ -52,7 +52,7 @@ void TouchGFXHAL::initialize()
  *
  * @return The address of the frame buffer currently being displayed on the TFT.
  */
-uint16_t* TouchGFXHAL::getTFTFrameBuffer() const
+uint16_t *TouchGFXHAL::getTFTFrameBuffer() const
 {
     // Calling parent implementation of getTFTFrameBuffer().
     //
@@ -67,7 +67,7 @@ uint16_t* TouchGFXHAL::getTFTFrameBuffer() const
  *
  * @param [in] address New frame buffer address.
  */
-void TouchGFXHAL::setTFTFrameBuffer(uint16_t* address)
+void TouchGFXHAL::setTFTFrameBuffer(uint16_t *address)
 {
     // Calling parent implementation of setTFTFrameBuffer(uint16_t* address).
     //
@@ -84,7 +84,7 @@ void TouchGFXHAL::setTFTFrameBuffer(uint16_t* address)
  *
  * @see flushFrameBuffer().
  */
-void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect& rect)
+void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect &rect)
 {
     // Calling parent implementation of flushFrameBuffer(const touchgfx::Rect& rect).
     //
@@ -95,7 +95,7 @@ void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect& rect)
     // To calculate the start address of rect,
     // use advanceFrameBufferToRect(uint8_t* fbPtr, const touchgfx::Rect& rect)
     // defined in TouchGFXGeneratedHAL.cpp
-	//printf("fluashBuffer\r\n");
+    // printf("fluashBuffer\r\n");
     uint8_t *fbPtr = (uint8_t *)getClientFrameBuffer();
     for (size_t row = 0; row < rect.height; row++)
     {
@@ -108,13 +108,13 @@ void TouchGFXHAL::flushFrameBuffer(const touchgfx::Rect& rect)
             pixel += 2;
         }
     }
-    //printf("fluashBuffer\r\n");
+    // printf("fluashBuffer\r\n");
     ICNA3306_DrawBuffer(0, 0, 240, 296, fbPtr, (240 * 296) * 2);
 
     TouchGFXGeneratedHAL::flushFrameBuffer(rect);
 }
 
-bool TouchGFXHAL::blockCopy(void* RESTRICT dest, const void* RESTRICT src, uint32_t numBytes)
+bool TouchGFXHAL::blockCopy(void *RESTRICT dest, const void *RESTRICT src, uint32_t numBytes)
 {
     return TouchGFXGeneratedHAL::blockCopy(dest, src, numBytes);
 }
@@ -175,17 +175,19 @@ void TouchGFXHAL::enableLCDControllerInterrupt()
 
 bool TouchGFXHAL::beginFrame()
 {
+    //printf("TouchGFX beginFrame\n");
     return TouchGFXGeneratedHAL::beginFrame();
 }
 
 void TouchGFXHAL::endFrame()
 {
+    //printf("TouchGFX endFrame\n");
     TouchGFXGeneratedHAL::endFrame();
 }
 extern "C" void touchgfx_tim_vsync(void)
 {
     OSWrappers::signalVSync();
-    //printf("5555\r\n");
+    // printf("5555\r\n");
 }
 /* USER CODE END TouchGFXHAL.cpp */
 

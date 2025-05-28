@@ -1,23 +1,23 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * File Name          : STM32TouchController.cpp
-  ******************************************************************************
-  * This file was created by TouchGFX Generator 4.25.0. This file is only
-  * generated once! Delete this file from your project and re-generate code
-  * using STM32CubeMX or change this file manually to update it.
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2025 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * File Name          : STM32TouchController.cpp
+ ******************************************************************************
+ * This file was created by TouchGFX Generator 4.25.0. This file is only
+ * generated once! Delete this file from your project and re-generate code
+ * using STM32CubeMX or change this file manually to update it.
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2025 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 
 /* USER CODE BEGIN STM32TouchController */
@@ -39,106 +39,88 @@ void STM32TouchController::init()
     printf("cst816d init\n");
 }
 
-bool STM32TouchController::sampleTouch(int32_t& x, int32_t& y)
+bool STM32TouchController::sampleTouch(int32_t &x, int32_t &y)
 {
-    /**
-     * By default sampleTouch returns false,
-     * return true if a touch has been detected, otherwise false.
-     *
-     * Coordinates are passed to the caller by reference by x and y.
-     *
-     * This function is called by the TouchGFX framework.
-     * By default sampleTouch is called every tick, this can be adjusted by HAL::setTouchSampleRate(int8_t);
-     *
-     */
-		static int32_t lastX = 0;
-	    static int32_t lastY = 0;
-	    static bool wasTouched = false;
-	    static bool justReleased = false;  // 新增：跟踪触摸刚刚释放的状态
+    static int32_t lastX = 0;
+    static int32_t lastY = 0;
+    static bool wasTouched = false;
+    static uint32_t touchStartTime = 0;
+    static uint8_t lastGesture = 0;
 
-	    // 设置有效的屏幕尺寸范围
-	    const int32_t MIN_X = 0;
-	    const int32_t MAX_X = 239;  // 根据您的屏幕实际宽度-1
-	    const int32_t MIN_Y = 0;
-	    const int32_t MAX_Y = 295;  // 根据您的屏幕实际高度-1
-	    const int32_t MIN_DELTA = 2; // 防抖动阈值
+    const int32_t MIN_X = 0;
+    const int32_t MAX_X = 239;
+    const int32_t MIN_Y = 0;
+    const int32_t MAX_Y = 295;
+    const int32_t MIN_DELTA = 1;
 
-	    // 检查触摸状态
-	    if (CST816D_IsTouched())
-	    {
-	        CST816D_TouchData touchData;
+    if (CST816D_IsTouched())
+    {
+        uint8_t raw_data[7] = {0};
+        extern HAL_StatusTypeDef CST816D_ReadReg(uint8_t reg_addr, uint8_t *data, uint16_t len);
 
-	        if (CST816D_GetTouchData(&touchData) == HAL_OK)
-	        {
-	            if (touchData.finger_num > 0)
-	            {
-	                // 获取坐标
-	                int32_t newX = touchData.x;
-	                int32_t newY = touchData.y;
+        if (CST816D_ReadReg(0x01, raw_data, 7) == HAL_OK)
+        {
+            uint8_t gesture = raw_data[0];
+            uint8_t finger_num = raw_data[1] & 0x0F;
+            int32_t newX = ((uint16_t)(raw_data[2] & 0x0F) << 8) | raw_data[3];
+            int32_t newY = ((uint16_t)(raw_data[4] & 0x0F) << 8) | raw_data[5];
 
-	                // 确保坐标在有效范围内
-	                if (newX < MIN_X) newX = MIN_X;
-	                if (newX > MAX_X) newX = MAX_X;
-	                if (newY < MIN_Y) newY = MIN_Y;
-	                if (newY > MAX_Y) newY = MAX_Y;
+            // printf("Raw: [%02X %02X %02X %02X %02X %02X %02X] -> fingers=%d, X=%ld, Y=%ld\n",
+            //        raw_data[0], raw_data[1], raw_data[2], raw_data[3],
+            //        raw_data[4], raw_data[5], raw_data[6],
+            //        finger_num, newX, newY);
 
-	                // 简单的防抖动处理
-	                bool significantChange = !wasTouched ||
-	                                      abs(newX - lastX) > MIN_DELTA ||
-	                                      abs(newY - lastY) > MIN_DELTA;
+            if (finger_num > 0)
+            {
+                // 如果是新的触摸事件
+                if (!wasTouched)
+                {
+                    touchStartTime = HAL_GetTick();
+                    lastGesture = gesture;
+                }
 
-	                if (significantChange || !wasTouched)
-	                {
-	                    // 更新坐标
-	                    x = newX;
-	                    y = newY;
-	                    lastX = x;
-	                    lastY = y;
-	                }
-	                else
-	                {
-	                    // 使用上次的有效坐标
-	                    x = lastX;
-	                    y = lastY;
-	                }
+                // 确保坐标在有效范围内
+                newX = (newX < MIN_X) ? MIN_X : (newX > MAX_X) ? MAX_X
+                                                               : newX;
+                newY = (newY < MIN_Y) ? MIN_Y : (newY > MAX_Y) ? MAX_Y
+                                                               : newY;
 
-	                // 设置触摸状态
-	                wasTouched = true;
-	                justReleased = false;
+                bool significantChange = !wasTouched ||
+                                         abs(newX - lastX) > MIN_DELTA ||
+                                         abs(newY - lastY) > MIN_DELTA;
 
-	                // 偶尔打印日志，而不是每次都打印
-	                static uint32_t logCounter = 0;
-	                if (++logCounter % 100 == 0) {
-	                    printf("Touch at: x=%ld, y=%ld\n", x, y);
-	                }
+                if (significantChange)
+                {
+                    x = newX;
+                    y = newY;
+                    lastX = x;
+                    lastY = y;
+                    // printf("Touch Event - X: %ld, Y: %ld, isDrag: %s, Gesture: 0x%02X\n",
+                    //        x, y, wasTouched ? "true" : "false", gesture);
+                }
+                else
+                {
+                    x = lastX;
+                    y = lastY;
+                }
 
-	                return true;
-	            }
-	        }
-	    }
-	    else if (wasTouched)
-	    {
-	        // 触摸刚刚结束
-	        if (!justReleased) {
-	            // 发送最后一个触摸位置，让TouchGFX识别释放事件
-	            x = lastX;
-	            y = lastY;
-	            justReleased = true;
-	            wasTouched = false;
+                wasTouched = true;
+                return true;
+            }
+        }
+    }
+    else if (wasTouched)
+    {
+        // // 只在真正释放时发送一次释放事件
+        // printf("Touch Released - Final X: %ld, Y: %ld, Duration: %ldms\n",
+        //        lastX, lastY, HAL_GetTick() - touchStartTime);
+        x = lastX;
+        y = lastY;
+        wasTouched = false;
+        return true;
+    }
 
-	            // 可选：记录触摸释放事件
-	            // printf("Touch released at: x=%ld, y=%ld\n", x, y);
-
-	            return true;  // 重要：返回true让TouchGFX知道这是释放事件
-	        }
-	        else {
-	            // 已经处理过释放事件，恢复到未触摸状态
-	            justReleased = false;
-	        }
-	    }
-
-	    return false;  // 无触摸
-
+    return false;
 }
 
 /* USER CODE END STM32TouchController */
