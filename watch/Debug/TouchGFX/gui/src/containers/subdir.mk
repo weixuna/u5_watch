@@ -5,12 +5,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../TouchGFX/gui/src/containers/ScrollMenuPage.cpp \
 ../TouchGFX/gui/src/containers/SwipeMenuPage.cpp 
 
 OBJS += \
+./TouchGFX/gui/src/containers/ScrollMenuPage.o \
 ./TouchGFX/gui/src/containers/SwipeMenuPage.o 
 
 CPP_DEPS += \
+./TouchGFX/gui/src/containers/ScrollMenuPage.d \
 ./TouchGFX/gui/src/containers/SwipeMenuPage.d 
 
 
@@ -21,7 +24,7 @@ TouchGFX/gui/src/containers/%.o TouchGFX/gui/src/containers/%.su TouchGFX/gui/sr
 clean: clean-TouchGFX-2f-gui-2f-src-2f-containers
 
 clean-TouchGFX-2f-gui-2f-src-2f-containers:
-	-$(RM) ./TouchGFX/gui/src/containers/SwipeMenuPage.cyclo ./TouchGFX/gui/src/containers/SwipeMenuPage.d ./TouchGFX/gui/src/containers/SwipeMenuPage.o ./TouchGFX/gui/src/containers/SwipeMenuPage.su
+	-$(RM) ./TouchGFX/gui/src/containers/ScrollMenuPage.cyclo ./TouchGFX/gui/src/containers/ScrollMenuPage.d ./TouchGFX/gui/src/containers/ScrollMenuPage.o ./TouchGFX/gui/src/containers/ScrollMenuPage.su ./TouchGFX/gui/src/containers/SwipeMenuPage.cyclo ./TouchGFX/gui/src/containers/SwipeMenuPage.d ./TouchGFX/gui/src/containers/SwipeMenuPage.o ./TouchGFX/gui/src/containers/SwipeMenuPage.su
 
 .PHONY: clean-TouchGFX-2f-gui-2f-src-2f-containers
 

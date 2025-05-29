@@ -1,0 +1,6 @@
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp:169:13:touchgfx::Font::~Font()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Font.hpp:169:13:virtual touchgfx::Font::~Font()	16	static
+../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp:91:7:touchgfx::GeneratedVectorFont::~GeneratedVectorFont()	16	static
+../TouchGFX/generated/fonts/include/fonts/GeneratedFont.hpp:91:7:virtual touchgfx::GeneratedVectorFont::~GeneratedVectorFont()	16	static
+../TouchGFX/generated/fonts/src/Vector_Table_STXIHEI_TTF_20.cpp:24:219:void __tcf_0()	8	static
+../TouchGFX/generated/fonts/src/Vector_Table_STXIHEI_TTF_20.cpp:22:32:touchgfx::GeneratedVectorFont& getFont_vector_STXIHEI_TTF_20()	24	static,ignoring_inline_asm

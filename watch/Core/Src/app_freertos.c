@@ -73,7 +73,7 @@ const osThreadAttr_t BMP280_Task_attributes = {
 /*##################   以下是创建互斥锁   ################################*/
 osMutexId_t i2cMutexHandle;
 const osMutexAttr_t i2cMutex_attributes = {
-    .name = "i2cMutex"}; // 超时时间
+    .name = "i2cMutex"};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -170,7 +170,7 @@ void BMP280_Task(void *argument)
     osMutexAcquire(i2cMutexHandle, osWaitForever);
     while (!bmp280_init(&bmp280, &bmp280.params))
     {
-        printf("BMP280 init error...\r\n");
+        // printf("BMP280 init error...\r\n");
         osMutexRelease(i2cMutexHandle); // 释放锁
         osDelay(100);
         osMutexAcquire(i2cMutexHandle, osWaitForever); // 重新获取锁
@@ -182,11 +182,11 @@ void BMP280_Task(void *argument)
         osMutexAcquire(i2cMutexHandle, osWaitForever);
         if (bmp280_read_float(&bmp280, &temperature, &pressure, &humidity))
         {
-            printf("pre: %.2f Pa, temp %.2f C\r\n", pressure, temperature);
+            // printf("pre: %.2f Pa, temp %.2f C\r\n", pressure, temperature);
         }
         else
         {
-            printf("BMP280 read error...\r\n");
+            // printf("BMP280 read error...\r\n");
         }
         // 读取后释放锁
         osMutexRelease(i2cMutexHandle);

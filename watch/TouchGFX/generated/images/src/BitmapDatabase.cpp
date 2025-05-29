@@ -5,49 +5,69 @@
 #include <touchgfx/Bitmap.hpp>
 
 extern const unsigned char image_alternate_theme_images_widgets_swipecontainer_medium_off_normal[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SWIPECONTAINER_MEDIUM_OFF_NORMAL_ID = 0, Size: 20x20 pixels
+extern const unsigned char image_alternate_theme_images_widgets_swipecontainer_medium_off_normal_extra_data[];
 extern const unsigned char image_alternate_theme_images_widgets_swipecontainer_medium_on_active[]; // BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_SWIPECONTAINER_MEDIUM_ON_ACTIVE_ID = 1, Size: 20x20 pixels
+extern const unsigned char image_alternate_theme_images_widgets_swipecontainer_medium_on_active_extra_data[];
 extern const unsigned char image_fore[]; // BITMAP_FORE_ID = 2, Size: 65x65 pixels
+extern const unsigned char image_fore_extra_data[];
 extern const unsigned char image_fore_pressed[]; // BITMAP_FORE_PRESSED_ID = 3, Size: 65x65 pixels
+extern const unsigned char image_fore_pressed_extra_data[];
 extern const unsigned char image_jishi[]; // BITMAP_JISHI_ID = 4, Size: 65x65 pixels
+extern const unsigned char image_jishi_extra_data[];
 extern const unsigned char image_jishi_pressed[]; // BITMAP_JISHI_PRESSED_ID = 5, Size: 65x65 pixels
+extern const unsigned char image_jishi_pressed_extra_data[];
 extern const unsigned char image_liangdu[]; // BITMAP_LIANGDU_ID = 6, Size: 65x65 pixels
+extern const unsigned char image_liangdu_extra_data[];
 extern const unsigned char image_liangdu_pressed[]; // BITMAP_LIANGDU_PRESSED_ID = 7, Size: 65x65 pixels
+extern const unsigned char image_liangdu_pressed_extra_data[];
 extern const unsigned char image_mianimage[]; // BITMAP_MIANIMAGE_ID = 8, Size: 240x296 pixels
 extern const unsigned char image_miaobiao[]; // BITMAP_MIAOBIAO_ID = 9, Size: 65x65 pixels
+extern const unsigned char image_miaobiao_extra_data[];
 extern const unsigned char image_miaobiao_pressed[]; // BITMAP_MIAOBIAO_PRESSED_ID = 10, Size: 65x65 pixels
+extern const unsigned char image_miaobiao_pressed_extra_data[];
 extern const unsigned char image_naozhong[]; // BITMAP_NAOZHONG_ID = 11, Size: 65x65 pixels
+extern const unsigned char image_naozhong_extra_data[];
 extern const unsigned char image_naozhong_pressed[]; // BITMAP_NAOZHONG_PRESSED_ID = 12, Size: 65x65 pixels
+extern const unsigned char image_naozhong_pressed_extra_data[];
 extern const unsigned char image_shezhi[]; // BITMAP_SHEZHI_ID = 13, Size: 65x65 pixels
+extern const unsigned char image_shezhi_extra_data[];
 extern const unsigned char image_shezhi_pressed[]; // BITMAP_SHEZHI_PRESSED_ID = 14, Size: 65x65 pixels
+extern const unsigned char image_shezhi_pressed_extra_data[];
 extern const unsigned char image_taiwan[]; // BITMAP_TAIWAN_ID = 15, Size: 65x65 pixels
+extern const unsigned char image_taiwan_extra_data[];
 extern const unsigned char image_taiwan_pressed[]; // BITMAP_TAIWAN_PRESSED_ID = 16, Size: 65x65 pixels
+extern const unsigned char image_taiwan_pressed_extra_data[];
 extern const unsigned char image_wurao[]; // BITMAP_WURAO_ID = 17, Size: 65x65 pixels
+extern const unsigned char image_wurao_extra_data[];
 extern const unsigned char image_wurao_pressed[]; // BITMAP_WURAO_PRESSED_ID = 18, Size: 65x65 pixels
+extern const unsigned char image_wurao_pressed_extra_data[];
 extern const unsigned char image_zhendong[]; // BITMAP_ZHENDONG_ID = 19, Size: 65x65 pixels
+extern const unsigned char image_zhendong_extra_data[];
 extern const unsigned char image_zhendong_pressed[]; // BITMAP_ZHENDONG_PRESSED_ID = 20, Size: 65x65 pixels
+extern const unsigned char image_zhendong_pressed_extra_data[];
 
 const touchgfx::Bitmap::BitmapData bitmap_database[] = {
-    { image_alternate_theme_images_widgets_swipecontainer_medium_off_normal, 0, 20, 20, 17, 6, 2, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 8, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 },
-    { image_alternate_theme_images_widgets_swipecontainer_medium_on_active, 0, 20, 20, 8, 7, 4, ((uint8_t)touchgfx::Bitmap::ARGB8888) >> 3, 6, ((uint8_t)touchgfx::Bitmap::ARGB8888) & 0x7 },
-    { image_fore, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_fore_pressed, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_jishi, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_jishi_pressed, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_liangdu, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_liangdu_pressed, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_mianimage, 0, 240, 296, 0, 0, 240, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 296, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_miaobiao, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_miaobiao_pressed, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_naozhong, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_naozhong_pressed, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_shezhi, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_shezhi_pressed, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_taiwan, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_taiwan_pressed, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_wurao, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_wurao_pressed, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_zhendong, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 },
-    { image_zhendong_pressed, 0, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::RGB565) >> 3, 65, ((uint8_t)touchgfx::Bitmap::RGB565) & 0x7 }
+    { image_alternate_theme_images_widgets_swipecontainer_medium_off_normal, image_alternate_theme_images_widgets_swipecontainer_medium_off_normal_extra_data, 20, 20, 17, 6, 2, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 8, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_alternate_theme_images_widgets_swipecontainer_medium_on_active, image_alternate_theme_images_widgets_swipecontainer_medium_on_active_extra_data, 20, 20, 8, 7, 4, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 6, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_fore, image_fore_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_fore_pressed, image_fore_pressed_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_jishi, image_jishi_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_jishi_pressed, image_jishi_pressed_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_liangdu, image_liangdu_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_liangdu_pressed, image_liangdu_pressed_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_mianimage, 0, 240, 296, 0, 0, 240, ((uint8_t)touchgfx::Bitmap::COMPRESSED_RGB565) >> 3, 296, ((uint8_t)touchgfx::Bitmap::COMPRESSED_RGB565) & 0x7 },
+    { image_miaobiao, image_miaobiao_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_miaobiao_pressed, image_miaobiao_pressed_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_naozhong, image_naozhong_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_naozhong_pressed, image_naozhong_pressed_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_shezhi, image_shezhi_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_shezhi_pressed, image_shezhi_pressed_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_taiwan, image_taiwan_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_taiwan_pressed, image_taiwan_pressed_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_wurao, image_wurao_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_wurao_pressed, image_wurao_pressed_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_zhendong, image_zhendong_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 },
+    { image_zhendong_pressed, image_zhendong_pressed_extra_data, 65, 65, 0, 0, 65, ((uint8_t)touchgfx::Bitmap::L8) >> 3, 65, ((uint8_t)touchgfx::Bitmap::L8) & 0x7 }
 };
 
 namespace BitmapDatabase

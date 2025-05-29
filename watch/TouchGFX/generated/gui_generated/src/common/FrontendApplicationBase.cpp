@@ -11,6 +11,8 @@
 #include <platform/driver/lcd/LCD16bpp.hpp>
 #include <gui/mainpage_screen/mainPageView.hpp>
 #include <gui/mainpage_screen/mainPagePresenter.hpp>
+#include <gui/menupage_screen/menuPageView.hpp>
+#include <gui/menupage_screen/menuPagePresenter.hpp>
 
 using namespace touchgfx;
 
@@ -21,6 +23,7 @@ FrontendApplicationBase::FrontendApplicationBase(Model& m, FrontendHeap& heap)
       model(m)
 {
     touchgfx::HAL::getInstance()->setDisplayOrientation(touchgfx::ORIENTATION_PORTRAIT);
+    touchgfx::Texts::setLanguage(GB);
     reinterpret_cast<touchgfx::LCD16bpp&>(touchgfx::HAL::lcd()).enableTextureMapperAll();
     reinterpret_cast<touchgfx::LCD16bpp&>(touchgfx::HAL::lcd()).enableDecompressorL8_All();
     reinterpret_cast<touchgfx::LCD16bpp&>(touchgfx::HAL::lcd()).enableDecompressorRGB();
@@ -41,4 +44,17 @@ void FrontendApplicationBase::gotomainPageScreenNoTransition()
 void FrontendApplicationBase::gotomainPageScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<mainPageView, mainPagePresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// menuPage
+
+void FrontendApplicationBase::gotomenuPageScreenSlideTransitionSouth()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplicationBase::gotomenuPageScreenSlideTransitionSouthImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotomenuPageScreenSlideTransitionSouthImpl()
+{
+    touchgfx::makeTransition<menuPageView, menuPagePresenter, touchgfx::SlideTransition<SOUTH>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

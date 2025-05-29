@@ -12,6 +12,47 @@
             "CustomContainerDefinitionName": "SwipeMenuPage"
           }
         ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerNone"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionSlide",
+              "ScreenTransitionDirection": "South",
+              "ActionComponent": "menuPage"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "menuPage",
+        "CanvasBufferSize": 3600,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 240,
+            "Height": 296
+          },
+          {
+            "Type": "ScrollWheel",
+            "Name": "scrollWheel",
+            "X": 17,
+            "Width": 207,
+            "Height": 296,
+            "SelectedItemOffset": 5,
+            "ItemTemplateName": "ScrollMenuPage",
+            "NumberofItems": 8,
+            "Easing": "Back",
+            "EasingOption": "Out",
+            "SwipeAcceleration": 1.0,
+            "DragAcceleration": 1.0,
+            "OverShootPercentage": 75
+          }
+        ],
         "Interactions": []
       }
     ],
@@ -169,6 +210,44 @@
                 "Released": "controlCenter_iamge\\fore.png"
               }
             ]
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "ScrollMenuPage",
+        "X": 17,
+        "Y": 21,
+        "Width": 207,
+        "Height": 54,
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "textArea1",
+            "X": 103,
+            "Y": 13,
+            "Width": 40,
+            "Height": 24,
+            "TextId": "__SingleUse_EK0A",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "SvgImage",
+            "Name": "svgImage1",
+            "X": 12,
+            "Y": 5,
+            "Width": 45,
+            "Height": 45,
+            "Image": "icon_ScrollMenuImage\\icon_Address_Book.svg",
+            "FitImageToSize": true,
+            "ImageHorizontalScale": 0.04,
+            "ImageVerticalScale": 0.04
           }
         ],
         "Interactions": []

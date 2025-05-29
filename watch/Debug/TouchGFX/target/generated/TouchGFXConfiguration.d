@@ -36,11 +36,8 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp \
- ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
- ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
- ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
- ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/button/ButtonController.hpp \
@@ -50,6 +47,12 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Atomic.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SnapshotWidget.hpp \
+ ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp \
  ../TouchGFX/gui/include/gui/model/Model.hpp \
  ../TouchGFX/gui/include/gui/mainpage_screen/mainPageView.hpp \
  ../TouchGFX/generated/gui_generated/include/gui_generated/mainpage_screen/mainPageViewBase.hpp \
@@ -63,11 +66,22 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
+ ../TouchGFX/gui/include/gui/menupage_screen/menuPageView.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/menupage_screen/menuPageViewBase.hpp \
+ ../TouchGFX/gui/include/gui/menupage_screen/menuPagePresenter.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheel.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheelBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp \
+ ../TouchGFX/gui/include/gui/containers/ScrollMenuPage.hpp \
+ ../TouchGFX/generated/gui_generated/include/gui_generated/containers/ScrollMenuPageBase.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
+ ../TouchGFX/generated/images/include/images/SVGDatabase.hpp \
  ../TouchGFX/generated/images/include/BitmapDatabase.hpp \
  ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/VectorFontRendererImpl.hpp \
@@ -150,11 +164,8 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/DebugPrinter.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:
-../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
-../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
-../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
-../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/transitions/SlideTransition.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/HAL.hpp:
 ../Middlewares/ST/touchgfx/framework/include/platform/core/MCUInstrumentation.hpp:
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/button/ButtonController.hpp:
@@ -164,6 +175,12 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Atomic.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/FrameBufferAllocator.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/hal/Gestures.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SnapshotWidget.hpp:
+../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/common/FrontendApplicationBase.hpp:
+../Middlewares/ST/touchgfx/framework/include/mvp/MVPApplication.hpp:
+../Middlewares/ST/touchgfx/framework/include/mvp/Presenter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:
 ../TouchGFX/gui/include/gui/model/Model.hpp:
 ../TouchGFX/gui/include/gui/mainpage_screen/mainPageView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/mainpage_screen/mainPageViewBase.hpp:
@@ -177,11 +194,22 @@ TouchGFX/target/generated/TouchGFXConfiguration.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/ListLayout.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TiledImage.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/EasingEquations.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/mixins/MoveAnimator.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
+../TouchGFX/gui/include/gui/menupage_screen/menuPageView.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/menupage_screen/menuPageViewBase.hpp:
+../TouchGFX/gui/include/gui/menupage_screen/menuPagePresenter.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheel.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheelBase.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollBase.hpp:
+../TouchGFX/gui/include/gui/containers/ScrollMenuPage.hpp:
+../TouchGFX/generated/gui_generated/include/gui_generated/containers/ScrollMenuPageBase.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
+../TouchGFX/generated/images/include/images/SVGDatabase.hpp:
 ../TouchGFX/generated/images/include/BitmapDatabase.hpp:
 ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/VectorFontRendererImpl.hpp:

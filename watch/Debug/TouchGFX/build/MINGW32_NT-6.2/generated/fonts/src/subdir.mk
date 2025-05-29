@@ -21,7 +21,13 @@ O_SRCS += \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src/Table_verdana_20_4bpp.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src/Table_verdana_40_4bpp.o \
 ../TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src/UnmappedDataFont.o \
-../TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src/VectorFontRendererBuffers.o 
+../TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src/VectorFontRendererBuffers.o \
+../TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src/Vector_Font_STXIHEI_TTF_0.o \
+../TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src/Vector_Font_STXIHEI_TTF_15.o \
+../TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src/Vector_Font_STXIHEI_TTF_17.o \
+../TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src/Vector_Kerning_STXIHEI_TTF.o \
+../TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src/Vector_Table_STXIHEI_TTF.o \
+../TouchGFX/build/MINGW32_NT-6.2/generated/fonts/src/Vector_Table_STXIHEI_TTF_20.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

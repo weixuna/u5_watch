@@ -196,6 +196,18 @@
     <Filter Include="Header Files\generated\gui_generated\containers">
       <UniqueIdentifier>4C424F9A-8DE1-5923-6CE5-1A1EB9960A9D</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\gui\menupage_screen">
+      <UniqueIdentifier>C19FF9FE-D6A2-3C03-12D3-26339D527EDF</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\menupage_screen">
+      <UniqueIdentifier>ED682001-B2A3-53F2-3307-14D3B5E30CC1</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\menupage_screen">
+      <UniqueIdentifier>625046CA-A75F-B049-E527-BCD987B64322</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\menupage_screen">
+      <UniqueIdentifier>D0B238B4-96CF-2552-0851-94B0412B7D71</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -242,6 +254,21 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\SwipeMenuPageBase.cpp">
       <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\containers\ScrollMenuPage.cpp">
+      <Filter>Source Files\gui\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\ScrollMenuPageBase.cpp">
+      <Filter>Source Files\generated\gui_generated\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\menupage_screen\menuPagePresenter.cpp">
+      <Filter>Source Files\gui\menupage_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\menupage_screen\menuPageView.cpp">
+      <Filter>Source Files\gui\menupage_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\menupage_screen\menuPageViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\menupage_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -699,6 +726,21 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\SwipeMenuPageBase.hpp">
       <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\containers\ScrollMenuPage.hpp">
+      <Filter>Header Files\gui\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\ScrollMenuPageBase.hpp">
+      <Filter>Header Files\generated\gui_generated\containers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\menupage_screen\menuPagePresenter.hpp">
+      <Filter>Header Files\gui\menupage_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\menupage_screen\menuPageView.hpp">
+      <Filter>Header Files\gui\menupage_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\menupage_screen\menuPageViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\menupage_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

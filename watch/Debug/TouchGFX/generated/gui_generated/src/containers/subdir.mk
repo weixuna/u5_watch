@@ -5,12 +5,15 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../TouchGFX/generated/gui_generated/src/containers/ScrollMenuPageBase.cpp \
 ../TouchGFX/generated/gui_generated/src/containers/SwipeMenuPageBase.cpp 
 
 OBJS += \
+./TouchGFX/generated/gui_generated/src/containers/ScrollMenuPageBase.o \
 ./TouchGFX/generated/gui_generated/src/containers/SwipeMenuPageBase.o 
 
 CPP_DEPS += \
+./TouchGFX/generated/gui_generated/src/containers/ScrollMenuPageBase.d \
 ./TouchGFX/generated/gui_generated/src/containers/SwipeMenuPageBase.d 
 
 
@@ -21,7 +24,7 @@ TouchGFX/generated/gui_generated/src/containers/%.o TouchGFX/generated/gui_gener
 clean: clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-containers
 
 clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-containers:
-	-$(RM) ./TouchGFX/generated/gui_generated/src/containers/SwipeMenuPageBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/SwipeMenuPageBase.d ./TouchGFX/generated/gui_generated/src/containers/SwipeMenuPageBase.o ./TouchGFX/generated/gui_generated/src/containers/SwipeMenuPageBase.su
+	-$(RM) ./TouchGFX/generated/gui_generated/src/containers/ScrollMenuPageBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/ScrollMenuPageBase.d ./TouchGFX/generated/gui_generated/src/containers/ScrollMenuPageBase.o ./TouchGFX/generated/gui_generated/src/containers/ScrollMenuPageBase.su ./TouchGFX/generated/gui_generated/src/containers/SwipeMenuPageBase.cyclo ./TouchGFX/generated/gui_generated/src/containers/SwipeMenuPageBase.d ./TouchGFX/generated/gui_generated/src/containers/SwipeMenuPageBase.o ./TouchGFX/generated/gui_generated/src/containers/SwipeMenuPageBase.su
 
 .PHONY: clean-TouchGFX-2f-generated-2f-gui_generated-2f-src-2f-containers
 

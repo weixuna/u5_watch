@@ -2,7 +2,6 @@
 
 mainPageView::mainPageView()
 {
-
 }
 
 void mainPageView::setupScreen()
@@ -28,8 +27,16 @@ void mainPageView::handleGestureEvent(const touchgfx::GestureEvent &evt)
         // 上滑时 (负值表示向上滑动)
         else if (evt.getVelocity() < 0)
         {
-            // 调用SwipeMenuPage的隐藏菜单方法
-            swipeMenuPage1.hideSlideMenu();
+            // 检查是否显示
+            if (swipeMenuPage1.isMenuVisible())
+            {
+                // 如果显示则隐藏
+                swipeMenuPage1.hideSlideMenu();
+            }
+            else
+            {
+                application().gotomenuPageScreenSlideTransitionSouth();
+            }
         }
     }
 

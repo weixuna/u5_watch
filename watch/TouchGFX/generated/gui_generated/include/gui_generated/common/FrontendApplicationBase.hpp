@@ -23,6 +23,9 @@ public:
     // mainPage
     void gotomainPageScreenNoTransition();
 
+    // menuPage
+    void gotomenuPageScreenSlideTransitionSouth();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -30,6 +33,9 @@ protected:
 
     // mainPage
     void gotomainPageScreenNoTransitionImpl();
+
+    // menuPage
+    void gotomenuPageScreenSlideTransitionSouthImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

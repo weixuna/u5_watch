@@ -375,8 +375,8 @@ void ICNA3306_Init(void)
     ICNA3306_WriteCmdParam(0x3A, 1, parameter);
 
      // (Memory Data Access Control)
-     //parameter[0] = 0x00; // RGB
-     //ICNA3306_WriteCmdParam(0x36, 1, parameter);
+     parameter[0] = 0x00; // RGB
+     ICNA3306_WriteCmdParam(0x36, 1, parameter);
 
     parameter[0] = 0x20;
     ICNA3306_WriteCmdParam(0x53, 1, parameter);

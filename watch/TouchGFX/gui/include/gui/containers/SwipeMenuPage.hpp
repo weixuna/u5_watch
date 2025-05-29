@@ -19,6 +19,9 @@ public:
 
     // 处理手势事件
     virtual void handleGestureEvent(const touchgfx::GestureEvent& event);
+
+    // 获取菜单是否可见
+    bool isMenuVisible() const { return menuVisible; }
 protected:
     bool menuVisible; // 菜单是否可见
 };

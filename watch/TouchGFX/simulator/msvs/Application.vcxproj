@@ -26,6 +26,11 @@
     <ClCompile Include="..\..\generated\gui_generated\src\mainpage_screen\mainPageViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\containers\SwipeMenuPage.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\containers\SwipeMenuPageBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\containers\ScrollMenuPage.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\containers\ScrollMenuPageBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\menupage_screen\menuPagePresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\menupage_screen\menuPageView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\menupage_screen\menuPageViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="$(ApplicationRoot)\assets\texts\texts.xml"/>
@@ -181,6 +186,11 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\mainpage_screen\mainPageViewBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\containers\SwipeMenuPage.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\SwipeMenuPageBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\containers\ScrollMenuPage.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\containers\ScrollMenuPageBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\menupage_screen\menuPagePresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\menupage_screen\menuPageView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\menupage_screen\menuPageViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="$(ApplicationRoot)\generated\simulator\touchgfx.rc"/>
