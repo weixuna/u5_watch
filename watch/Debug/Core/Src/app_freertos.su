@@ -1,4 +1,4 @@
-../Core/Src/app_freertos.c:80:6:MX_FREERTOS_Init	8	static
-../Core/Src/app_freertos.c:122:6:StartDefaultTask	16	static
-../Core/Src/app_freertos.c:137:6:TouchGFX_GUI	16	static
-../Core/Src/app_freertos.c:152:6:BMP280_Task	40	static
+../Core/Src/app_freertos.c:88:6:MX_FREERTOS_Init	8	static
+../Core/Src/app_freertos.c:131:6:StartDefaultTask	16	static
+../Core/Src/app_freertos.c:146:6:TouchGFX_GUI	16	static
+../Core/Src/app_freertos.c:162:6:BMP280_Task	32	static

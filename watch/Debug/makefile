@@ -121,7 +121,7 @@ main-build: watch.elf secondary-outputs
 
 # Tool invocations
 watch.elf watch.map: $(OBJS) $(USER_OBJS) D:\GitHub\u5_watch\watch\STM32U575RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "watch.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m33 -T"D:\GitHub\u5_watch\watch\STM32U575RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="watch.map" -Wl,--gc-sections -static -L"D:\GitHub\u5_watch\watch\Middlewares\ST\touchgfx\lib\core\cortex_m33\gcc" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+	arm-none-eabi-g++ -o "watch.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m33 -T"D:\GitHub\u5_watch\watch\STM32U575RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="watch.map" -Wl,--gc-sections -static -L"D:\GitHub\u5_watch\watch\Middlewares\ST\touchgfx\lib\core\cortex_m33\gcc" --specs=nano.specs -mfpu=fpv5-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

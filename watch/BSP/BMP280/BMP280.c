@@ -25,12 +25,12 @@
 
 void bmp280_init_default_params(bmp280_params_t *params)
 {
-    params->mode = BMP280_MODE_NORMAL;
-    params->filter = BMP280_FILTER_OFF;
-    params->oversampling_pressure = BMP280_STANDARD;
-    params->oversampling_temperature = BMP280_STANDARD;
-    params->oversampling_humidity = BMP280_STANDARD;
-    params->standby = BMP280_STANDBY_250;
+    params->mode = BMP280_MODE_NORMAL;                  // 强制模式
+    params->filter = BMP280_FILTER_4;                   // 4倍滤波
+    params->oversampling_pressure = BMP280_STANDARD;    // 4倍过采样
+    params->oversampling_temperature = BMP280_STANDARD; // 4倍过采样
+    // params->oversampling_humidity = BMP280_STANDARD;
+    params->standby = BMP280_STANDBY_250; // 250ms待机时间
 }
 
 static bool read_register16(BMP280_HandleTypedef *dev, uint8_t addr, uint16_t *value)
