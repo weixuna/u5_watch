@@ -34,7 +34,7 @@ protected:
     touchgfx::Box __background;
     touchgfx::Box box1;
     touchgfx::ScrollWheel scrollWheel;
-    touchgfx::DrawableListItems<ScrollMenuPage, 7> scrollWheelListItems;
+    touchgfx::DrawableListItems<ScrollMenuPage, 5> scrollWheelListItems;
 
 private:
 

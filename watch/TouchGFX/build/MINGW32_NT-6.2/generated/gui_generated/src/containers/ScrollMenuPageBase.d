@@ -45,10 +45,10 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/containers/ScrollMenuPageBase.o
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
  generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
- generated/images/include/images/SVGDatabase.hpp
+ generated/images/include/images/BitmapDatabase.hpp
 
 generated/gui_generated/include/gui_generated/containers/ScrollMenuPageBase.hpp:
 
@@ -140,10 +140,10 @@ gui/include/gui/model/Model.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 
 generated/texts/include/texts/TextKeysAndLanguages.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 
-generated/images/include/images/SVGDatabase.hpp:
+generated/images/include/images/BitmapDatabase.hpp:

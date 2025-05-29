@@ -15,6 +15,6 @@
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="Menu" Font="STXIHEI.TTF" Size="20" Bpp="4" IsVector="yes" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Menu" Font="STXIHEI.TTF" Size="25" Bpp="4" IsVector="yes" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>

@@ -57,9 +57,9 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheel.hpp:39:7:touchgfx::ScrollWheel::~ScrollWheel()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/ScrollWheel.hpp:39:7:virtual touchgfx::ScrollWheel::~ScrollWheel()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:38:7:constexpr touchgfx::DrawableListItemsInterface::DrawableListItemsInterface()	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:79:7:touchgfx::DrawableListItems<ScrollMenuPage, 7>::DrawableListItems()	24	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:79:7:touchgfx::DrawableListItems<ScrollMenuPage, 7>::~DrawableListItems()	24	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:79:7:virtual touchgfx::DrawableListItems<ScrollMenuPage, 7>::~DrawableListItems()	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:79:7:touchgfx::DrawableListItems<ScrollMenuPage, 5>::DrawableListItems()	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:79:7:touchgfx::DrawableListItems<ScrollMenuPage, 5>::~DrawableListItems()	24	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:79:7:virtual touchgfx::DrawableListItems<ScrollMenuPage, 5>::~DrawableListItems()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:218:8:touchgfx::Callback<menuPageViewBase, touchgfx::DrawableListItemsInterface*, short int, short int>::~Callback()	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:218:8:virtual touchgfx::Callback<menuPageViewBase, touchgfx::DrawableListItemsInterface*, short int, short int>::~Callback()	16	static
 ../TouchGFX/generated/gui_generated/src/menupage_screen/menuPageViewBase.cpp:8:1:menuPageViewBase::menuPageViewBase()	56	static
@@ -72,8 +72,8 @@
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:237:5:touchgfx::Callback<dest_type, T1, T2, T3>::Callback(dest_type*, void (dest_type::*)(T1, T2, T3)) [with dest_type = menuPageViewBase; T1 = touchgfx::DrawableListItemsInterface*; T2 = short int; T3 = short int]	24	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:48:13:touchgfx::GenericCallback<T1, T2, T3>::~GenericCallback() [with T1 = touchgfx::DrawableListItemsInterface*; T2 = short int; T3 = short int]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:48:13:touchgfx::GenericCallback<T1, T2, T3>::~GenericCallback() [with T1 = touchgfx::DrawableListItemsInterface*; T2 = short int; T3 = short int]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:101:21:int16_t touchgfx::DrawableListItems<TYPE, SIZE>::getNumberOfDrawables() [with TYPE = ScrollMenuPage; int SIZE = 7]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:95:11:TYPE& touchgfx::DrawableListItems<TYPE, SIZE>::operator[](int) [with TYPE = ScrollMenuPage; int SIZE = 7]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:101:21:int16_t touchgfx::DrawableListItems<TYPE, SIZE>::getNumberOfDrawables() [with TYPE = ScrollMenuPage; int SIZE = 5]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:95:11:TYPE& touchgfx::DrawableListItems<TYPE, SIZE>::operator[](int) [with TYPE = ScrollMenuPage; int SIZE = 5]	16	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:250:18:void touchgfx::Callback<dest_type, T1, T2, T3>::execute(T1, T2, T3) [with dest_type = menuPageViewBase; T1 = touchgfx::DrawableListItemsInterface*; T2 = short int; T3 = short int]	32	static
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Callback.hpp:260:18:bool touchgfx::Callback<dest_type, T1, T2, T3>::isValid() const [with dest_type = menuPageViewBase; T1 = touchgfx::DrawableListItemsInterface*; T2 = short int; T3 = short int]	16	static
-../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:82:23:touchgfx::Drawable* touchgfx::DrawableListItems<TYPE, SIZE>::getDrawable(int16_t) [with TYPE = ScrollMenuPage; int SIZE = 7]	16	static
+../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/scrollers/DrawableList.hpp:82:23:touchgfx::Drawable* touchgfx::DrawableListItems<TYPE, SIZE>::getDrawable(int16_t) [with TYPE = ScrollMenuPage; int SIZE = 5]	16	static

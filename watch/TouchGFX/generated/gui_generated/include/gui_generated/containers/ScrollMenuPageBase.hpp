@@ -7,7 +7,7 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
-#include <touchgfx/widgets/SVGImage.hpp>
+#include <touchgfx/widgets/Image.hpp>
 
 class ScrollMenuPageBase : public touchgfx::Container
 {
@@ -25,7 +25,7 @@ protected:
      * Member Declarations
      */
     touchgfx::TextArea textArea1;
-    touchgfx::SVGImage svgImage1;
+    touchgfx::Image image1;
 
 private:
 

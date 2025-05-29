@@ -46,8 +46,8 @@ build/MINGW32_NT-6.2/gui/src/containers/ScrollMenuPage.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
- generated/images/include/images/SVGDatabase.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
+ generated/images/include/images/BitmapDatabase.hpp
 
 gui/include/gui/containers/ScrollMenuPage.hpp:
 
@@ -141,6 +141,6 @@ gui/include/gui/model/Model.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
 
-generated/images/include/images/SVGDatabase.hpp:
+generated/images/include/images/BitmapDatabase.hpp:

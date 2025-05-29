@@ -100,8 +100,6 @@ build/MINGW32_NT-6.2/generated/simulator/src/mainBase.o: \
  gui/include/gui/containers/ScrollMenuPage.hpp \
  generated/gui_generated/include/gui_generated/containers/ScrollMenuPageBase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
- generated/images/include/images/SVGDatabase.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/CWRVectorRenderer.hpp \
@@ -328,10 +326,6 @@ gui/include/gui/containers/ScrollMenuPage.hpp:
 generated/gui_generated/include/gui_generated/containers/ScrollMenuPageBase.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
-
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
-
-generated/images/include/images/SVGDatabase.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp:
 

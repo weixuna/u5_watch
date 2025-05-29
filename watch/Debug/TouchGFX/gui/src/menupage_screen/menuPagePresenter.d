@@ -57,8 +57,8 @@ TouchGFX/gui/src/menupage_screen/menuPagePresenter.o: \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
- ../TouchGFX/generated/images/include/images/SVGDatabase.hpp
+ ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
+ ../TouchGFX/generated/images/include/images/BitmapDatabase.hpp
 ../TouchGFX/gui/include/gui/menupage_screen/menuPageView.hpp:
 ../TouchGFX/generated/gui_generated/include/gui_generated/menupage_screen/menuPageViewBase.hpp:
 ../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -116,5 +116,5 @@ TouchGFX/gui/src/menupage_screen/menuPagePresenter.o: \
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
-../TouchGFX/generated/images/include/images/SVGDatabase.hpp:
+../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
+../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:

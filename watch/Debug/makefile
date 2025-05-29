@@ -17,6 +17,7 @@ RM := rm -rf
 -include TouchGFX/gui/src/containers/subdir.mk
 -include TouchGFX/gui/src/common/subdir.mk
 -include TouchGFX/generated/texts/src/subdir.mk
+-include TouchGFX/generated/images/src/icon_ScrollMenuImage/subdir.mk
 -include TouchGFX/generated/images/src/controlCenter_iamge/subdir.mk
 -include TouchGFX/generated/images/src/__generated/subdir.mk
 -include TouchGFX/generated/images/src/subdir.mk
@@ -36,6 +37,7 @@ RM := rm -rf
 -include TouchGFX/build/MINGW32_NT-6.2/generated/texts/src/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/simulator/src/video/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/simulator/src/subdir.mk
+-include TouchGFX/build/MINGW32_NT-6.2/generated/images/src/icon_ScrollMenuImage/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/images/src/controlCenter_iamge/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__generated/subdir.mk
 -include TouchGFX/build/MINGW32_NT-6.2/generated/images/src/subdir.mk

@@ -24,10 +24,10 @@ menuPageViewBase::menuPageViewBase() :
     scrollWheel.setEasingEquation(touchgfx::EasingEquations::backEaseOut);
     scrollWheel.setSwipeAcceleration(10);
     scrollWheel.setDragAcceleration(10);
-    scrollWheel.setNumberOfItems(8);
+    scrollWheel.setNumberOfItems(9);
     scrollWheel.setSelectedItemOffset(5);
     scrollWheel.setOvershootPercentage(75);
-    scrollWheel.setDrawableSize(54, 0);
+    scrollWheel.setDrawableSize(83, 0);
     scrollWheel.setDrawables(scrollWheelListItems, updateItemCallback);
     scrollWheel.animateToItem(0, 0);
     add(scrollWheel);

@@ -4,25 +4,21 @@
 #include <gui_generated/containers/ScrollMenuPageBase.hpp>
 #include <texts/TextKeysAndLanguages.hpp>
 #include <touchgfx/Color.hpp>
-#include<images/SVGDatabase.hpp>
+#include <images/BitmapDatabase.hpp>
 
 ScrollMenuPageBase::ScrollMenuPageBase()
 {
     setWidth(207);
-    setHeight(54);
-    textArea1.setXY(103, 13);
+    setHeight(83);
+    textArea1.setXY(103, 26);
     textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textArea1.setLinespacing(0);
     textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_EK0A));
     add(textArea1);
 
-    svgImage1.setSVG(SVG_ICON_ADDRESS_BOOK_ID);
-    svgImage1.setPosition(12, 5, 45, 45);
-    svgImage1.setScale(0.04f, 0.04f);
-    svgImage1.setImagePosition(0, 0);
-    svgImage1.setRotationCenter(0, 0);
-    svgImage1.setRotation(0.0f);
-    add(svgImage1);
+    image1.setXY(13, 9);
+    image1.setBitmap(touchgfx::Bitmap(BITMAP_ICON_SETTINGS_ID));
+    add(image1);
 }
 
 ScrollMenuPageBase::~ScrollMenuPageBase()

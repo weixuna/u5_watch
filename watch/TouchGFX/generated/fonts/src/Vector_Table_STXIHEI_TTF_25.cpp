@@ -2,7 +2,7 @@
 
 #include <fonts/GeneratedFont.hpp>
 
-touchgfx::GeneratedVectorFont& getFont_vector_STXIHEI_TTF_20();
+touchgfx::GeneratedVectorFont& getFont_vector_STXIHEI_TTF_25();
 
 FONT_TABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::VectorFontNode vector_glyphs_STXIHEI_TTF[] FONT_TABLE_LOCATION_FLASH_ATTRIBUTE;
@@ -19,8 +19,8 @@ KEEP extern const touchgfx::VectorKerningNode vector_kerning_STXIHEI_TTF[] FONT_
 FONT_SEARCHTABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const uint16_t vector_STXIHEI_TTF_gsubTable[] FONT_SEARCHTABLE_LOCATION_FLASH_ATTRIBUTE;
 
-touchgfx::GeneratedVectorFont& getFont_vector_STXIHEI_TTF_20()
+touchgfx::GeneratedVectorFont& getFont_vector_STXIHEI_TTF_25()
 {
-    static touchgfx::GeneratedVectorFont vector_STXIHEI_TTF_20(20, 0.02f, vector_glyphs_STXIHEI_TTF, vector_fontData_STXIHEI_TTF, vector_unicodes_STXIHEI_TTF, vector_kerning_STXIHEI_TTF, vector_STXIHEI_TTF_gsubTable, 0);
-    return vector_STXIHEI_TTF_20;
+    static touchgfx::GeneratedVectorFont vector_STXIHEI_TTF_25(25, 0.025f, vector_glyphs_STXIHEI_TTF, vector_fontData_STXIHEI_TTF, vector_unicodes_STXIHEI_TTF, vector_kerning_STXIHEI_TTF, vector_STXIHEI_TTF_gsubTable, 0);
+    return vector_STXIHEI_TTF_25;
 }

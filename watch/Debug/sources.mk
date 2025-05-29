@@ -57,6 +57,7 @@ TouchGFX/build/MINGW32_NT-6.2/generated/gui_generated/src/menupage_screen \
 TouchGFX/build/MINGW32_NT-6.2/generated/images/src \
 TouchGFX/build/MINGW32_NT-6.2/generated/images/src/__generated \
 TouchGFX/build/MINGW32_NT-6.2/generated/images/src/controlCenter_iamge \
+TouchGFX/build/MINGW32_NT-6.2/generated/images/src/icon_ScrollMenuImage \
 TouchGFX/build/MINGW32_NT-6.2/generated/simulator/src \
 TouchGFX/build/MINGW32_NT-6.2/generated/simulator/src/video \
 TouchGFX/build/MINGW32_NT-6.2/generated/texts/src \
@@ -76,6 +77,7 @@ TouchGFX/generated/gui_generated/src/menupage_screen \
 TouchGFX/generated/images/src \
 TouchGFX/generated/images/src/__generated \
 TouchGFX/generated/images/src/controlCenter_iamge \
+TouchGFX/generated/images/src/icon_ScrollMenuImage \
 TouchGFX/generated/texts/src \
 TouchGFX/gui/src/common \
 TouchGFX/gui/src/containers \

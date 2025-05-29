@@ -76,8 +76,7 @@ build/MINGW32_NT-6.2/generated/gui_generated/src/common/FrontendApplicationBase.
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
- ../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp \
- generated/images/include/images/SVGDatabase.hpp \
+ generated/images/include/images/BitmapDatabase.hpp \
  generated/texts/include/texts/TextKeysAndLanguages.hpp \
  ../Middlewares/ST/touchgfx/framework/include/platform/driver/lcd/LCD16bpp.hpp \
  ../Middlewares/ST/touchgfx/framework/include/touchgfx/lcd/LCD16DebugPrinter.hpp
@@ -236,9 +235,7 @@ generated/gui_generated/include/gui_generated/containers/ScrollMenuPageBase.hpp:
 
 ../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
 
-../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/SVGImage.hpp:
-
-generated/images/include/images/SVGDatabase.hpp:
+generated/images/include/images/BitmapDatabase.hpp:
 
 generated/texts/include/texts/TextKeysAndLanguages.hpp:
 
